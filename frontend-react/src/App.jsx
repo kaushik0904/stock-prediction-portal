@@ -6,12 +6,14 @@ import Register from './components/Register'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Login from './components/Login'
+import AuthProvider from './authProvider'
 
 
 function App() {
 
   return (
     <>
+    <AuthProvider>
      <BrowserRouter>
      <Header />
       <Routes>
@@ -20,7 +22,8 @@ function App() {
         <Route path='/login' element={<Login />} />
       </Routes>
      <Footer /> 
-     </BrowserRouter> 
+     </BrowserRouter>
+    </AuthProvider> 
     </>
   )
 }
